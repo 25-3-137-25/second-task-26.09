@@ -1,3 +1,4 @@
+from functools import wraps
 def timer(func):
     import time
     def wrapper(*args, **kwargs):
@@ -13,4 +14,12 @@ def logger(func):
         result = func(*args, **kwargs)
         print(f"Результат: {result}")
         return result
+    return wrapper
+
+def no_zero_division(func):
+    @wraps(func)
+    def wrapper(x):
+        if x == 0:
+            raise ValueError("Деление на ноль запрещено")
+        return func(x)
     return wrapper
