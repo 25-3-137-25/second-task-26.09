@@ -35,7 +35,7 @@ def main():
 
     print_table(x, y)
     plot_graph(x, y, func_name)
-    print(f"\nГотово! {func_name} на [{a}, {b}] шаг {h}")
+    print(f"\n{func_name} на [{a}, {b}] шаг {h}")
 
 
 if __name__ == "__main__":
