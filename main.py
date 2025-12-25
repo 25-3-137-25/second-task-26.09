@@ -1,12 +1,12 @@
-from functions import sin, cos, exp, quadratic, logistic
-from visual import plot_graph, print_table
+from functions import *
+from visual import *
 
 FUNCTIONS = {
     '1': ('sin', sin),
     '2': ('cos', cos),
     '3': ('exp', exp),
     '4': ('quadratic', quadratic),
-    '5': ('logistic', logistic)
+    '5': ('obr_proporc', obr_proporc)
 }
 
 

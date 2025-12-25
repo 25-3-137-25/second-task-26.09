@@ -1,5 +1,5 @@
 import math
-from decorator import timer, logger
+from decorator import *
 
 @timer
 @logger
@@ -23,5 +23,6 @@ def quadratic(x):
 
 @timer
 @logger
-def logistic(x):
-    return 1 / (1 + math.exp(-x))
+@no_zero_division
+def obr_proporc(x):
+    return 1 / x
